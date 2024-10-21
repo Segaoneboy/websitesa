@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+<!-- Хедер -->
+<header class="bg-white shadow-md">
+    <div class="container mx-auto p-6 flex justify-between items-center">
+        <img src="./Baner-Nofone.png" alt="Logo SA" class="w-64">
+        <button id="burger" class="block md:hidden focus:outline-none">
+            <div class="w-6 h-1 bg-black mb-1"></div>
+            <div class="w-6 h-1 bg-black mb-1"></div>
+            <div class="w-6 h-1 bg-black"></div>
+        </button>
+
+
+        <nav id="menu" class="hidden md:flex flex-col md:flex-row md:ml-6">
+            <a href="./index.html" class="block py-2 md:ml-4 text-gray-700 hover:text-gray-900">Главная</a>
+            <a href="./team.html" class="block py-2 md:ml-4 text-gray-700 hover:text-gray-900">О команде</a>
+            <a href="./weather.html" class="block py-2 md:ml-4 text-gray-700 hover:text-gray-900">Погода</a>
+        </nav>
+    </div>
+
+
+    <nav id="mobile-menu" class="hidden md:hidden bg-white p-6">
+        <a href="./index.html" class="block py-2 text-gray-700 hover:text-gray-900">Главная</a>
+        <a href="./team.html" class="block py-2 text-gray-700 hover:text-gray-900">О команде</a>
+        <a href="./weather.html" class="block py-2 text-gray-700 hover:text-gray-900">Погода</a>
+    </nav>
+</header>
+
+<!-- Основной блок -->
+<main class="container mx-auto p-6 mt-6">
+    <div class="flex flex-wrap justify-center gap-6">
+        <div class="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="photo_2024-10-21_14-40-58.jpg" alt="Profile photo" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-gray-800">Пересыпкин Сергей</h2>
+                <p class="text-gray-600 mt-2">
+                    Сергей — Fullstack developer
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="photo_2024-10-21_14-41-09.jpg" alt="Profile photo" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-gray-800">Сутюшев Кирилл</h2>
+                <p class="text-gray-600 mt-2">
+                    Кирилл - frontend developer
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="photo_2024-10-21_14-41-03.jpg" alt="Profile photo" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-gray-800">Зыков Роман</h2>
+                <p class="text-gray-600 mt-2">
+                    Роман - Fullstack developer
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="photo_2024-10-21_14-42-46.jpg" alt="Profile photo" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-gray-800">Амелин Илья</h2>
+                <p class="text-gray-600 mt-2">
+                    Илья - инженер
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="photo_2024-10-21_14-41-14.jpg" alt="Profile photo" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-gray-800">Хамидулин Эмиль</h2>
+                <p class="text-gray-600 mt-2">
+                    Эмиль - Backend developer
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    burger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
